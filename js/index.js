@@ -17,12 +17,14 @@ function bookIdentifier() {
     return bookCount;    
 }
 
-function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read == "true";
-    this.identifier = bookIdentifier();
+class Book {
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read == "true";
+        this.identifier = bookIdentifier();
+    }
 }
 
 var table = document.getElementById("libraryTable");
